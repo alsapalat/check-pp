@@ -10,3 +10,7 @@ button {
   height: 42px;
   @apply border rounded !bg-blue-500 text-white font-semibold px-6;
 }
+
+td, th {
+  @apply border border-black px-1;
+}
