@@ -1,16 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply bg-slate-400
+  @apply text-black;
+  font-family: "Inter";
+  @apply bg-[#F3F3F3];
+}
+
+#root {
+  @apply h-screen w-screen flex;
 }
 
 button {
-  height: 42px;
-  @apply border rounded !bg-blue-500 text-white font-semibold px-6;
+  @apply py-3 px-4 rounded text-white !bg-primary;
+  @apply hover:!bg-primary-dark hover:ring-2 ring-primary-dark ring-offset-2;
+  @apply active:ring-transparent;
 }
 
-td, th {
-  @apply border border-black px-1;
+button.sm {
+  @apply py-2 px-3.5 text-xs leading-4 font-semibold;
+}
+
+.ds-table {
+  @apply table table-auto w-full text-left text-xs border-x border-[#E4E4E4];
+}
+
+.ds-table th {
+  @apply bg-[#F3F3F3] py-3 px-4 whitespace-nowrap text-[#606774] uppercase;
+  letter-spacing: 0.6px;
+}
+
+.ds-table td {
+  @apply py-3 px-4 whitespace-nowrap;
+  @apply text-sm leading-4;
+}
+
+.ds-table thead tr {
+  @apply sticky top-0 z-10;
+}
+
+.ds-table tr {
+  @apply border-y border-[#E4E4E4];
+}
+
+.ds-table .freeze-right {
+  @apply sticky right-0;
+}
+
+td.freeze-right {
+  @apply bg-white;
+}
+
+th.freeze-right::before,
+td.freeze-right::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background: #E4E4E4;
+  width: 2px;
 }
