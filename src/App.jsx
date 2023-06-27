@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useCsvInfo from './attendance/useCsvInfo';
 import AttendanceSummary from './AttendanceSummary';
 import FileButton from './FileButton';
+import logo from './logo.png';
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
       <div className="m-auto bg-white p-10 rounded-lg shadow-card space-y-2.5 text-center flex flex-col items-center justify-center">
-        <div><img className="w-[200px]" src="/images/logo.png" /></div>
+        <div><img className="w-[200px]" src={logo} /></div>
         <div className="text-xl leading-6 font-bold text-primary">
           Attendance Summary
         </div>
